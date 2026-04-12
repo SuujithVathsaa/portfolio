@@ -3,414 +3,405 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suujith Vathsaa Ramesh — Data Analyst · AI & Data</title>
-  <meta name="description" content="Performance Data Analyst specialising in UK transport infrastructure analytics, AI-enabled ERP, and digital transformation.">
+  <title>SVR — Data Analyst. AI Explorer. Problem Dissolver.</title>
+  <meta name="description" content="Suujith Vathsaa Ramesh. Performance Data Analyst specialising in AI, transport infrastructure, and finding the signal in all the noise.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="is-loading">
+<body>
 
-  <!-- ── LOADER ────────────────────────────────── -->
-  <div id="loader">
-    <div class="loader-logo-wrap">
-      <img src="logo.png" alt="SVR" class="loader-logo">
+  <!-- ── TICKER ──────────────────────────────── -->
+  <div class="top-ticker">
+    <div class="ticker-track">
+      <span>OPEN TO FULL-TIME &amp; FREELANCE</span>
+      <span class="t-dot">◆</span>
+      <span>AI + DATA ANALYST</span>
+      <span class="t-dot">◆</span>
+      <span>UK BASED · REMOTE FRIENDLY</span>
+      <span class="t-dot">◆</span>
+      <span>CURRENTLY @ AMEY PLC</span>
+      <span class="t-dot">◆</span>
+      <span>BREAKING THINGS WITH AI SINCE 2018</span>
+      <span class="t-dot">◆</span>
+      <span>OPEN TO FULL-TIME &amp; FREELANCE</span>
+      <span class="t-dot">◆</span>
+      <span>AI + DATA ANALYST</span>
+      <span class="t-dot">◆</span>
+      <span>UK BASED · REMOTE FRIENDLY</span>
+      <span class="t-dot">◆</span>
+      <span>CURRENTLY @ AMEY PLC</span>
+      <span class="t-dot">◆</span>
+      <span>BREAKING THINGS WITH AI SINCE 2018</span>
+      <span class="t-dot">◆</span>
     </div>
-    <div class="loader-bar-wrap">
-      <div class="loader-bar" id="loaderBar"></div>
-    </div>
-    <div class="loader-label">Loading</div>
   </div>
 
-  <!-- ── GRAIN ─────────────────────────────────── -->
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- ── CURSOR ────────────────────────────────── -->
-  <div class="cursor-dot"  id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
   <!-- ── NAV ───────────────────────────────────── -->
-  <header class="nav" id="nav">
+  <header class="nav">
     <a href="#hero" class="nav-brand">
-      <img src="logo.png" alt="SVR" class="nav-mark-img">
-      <span class="nav-mark-text">SVR</span>
+      <img src="logo.png" alt="SVR" class="nav-wolf">
+      <span>SVR</span>
     </a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="#about"      class="nav-lnk">About</a>
-      <a href="#experience" class="nav-lnk">Work</a>
-      <a href="#skills"     class="nav-lnk">Skills</a>
-      <a href="#contact"    class="nav-lnk">Contact</a>
+
+    <nav class="nav-center">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Stack</a>
+      <a href="#contact">Hire Me</a>
     </nav>
-    <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span class="hb-bar"></span>
-      <span class="hb-bar"></span>
+
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span>Available for work</span>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
     </button>
   </header>
 
-  <!-- ── MOBILE NAV ───────────────────────────── -->
-  <div class="mob-nav" id="mobNav">
-    <a href="#about"      class="mob-lnk">About</a>
-    <a href="#experience" class="mob-lnk">Work</a>
-    <a href="#skills"     class="mob-lnk">Skills</a>
-    <a href="#contact"    class="mob-lnk">Contact</a>
+  <!-- ── MOBILE MENU ───────────────────────────── -->
+  <div class="mob-menu" id="mobMenu">
+    <a href="#about"   class="mob-lnk">About</a>
+    <a href="#work"    class="mob-lnk">Work</a>
+    <a href="#skills"  class="mob-lnk">Stack</a>
+    <a href="#contact" class="mob-lnk">Hire Me</a>
   </div>
 
-  <!-- ══════════════════════════════════════════ -->
-  <!-- HERO                                       -->
-  <!-- ══════════════════════════════════════════ -->
+  <!-- ════════════════════════════════════════════ -->
+  <!-- HERO                                         -->
+  <!-- ════════════════════════════════════════════ -->
   <section id="hero" class="hero">
-    <canvas id="heroCanvas"></canvas>
 
-    <div class="hero-inner">
-      <div class="hero-eyebrow" id="heroEyebrow">
-        <span class="pulse-dot"></span>
-        <span>Performance Data Analyst &nbsp;·&nbsp; AI & Data</span>
+    <!-- Left col -->
+    <div class="hero-left">
+      <div class="wolf-frame">
+        <img src="logo.png" alt="SVR Wolf" class="hero-wolf">
+        <div class="wolf-label">SUUJITH<br>VATHSAA<br>RAMESH</div>
       </div>
+    </div>
 
-      <h1 class="hero-name" id="heroName">
-        <span class="hn-row"><span>Suujith</span></span>
-        <span class="hn-row"><span>Vathsaa</span></span>
-        <span class="hn-row orange"><span>Ramesh</span></span>
+    <!-- Center col -->
+    <div class="hero-center">
+      <p class="hero-intro">I'm a data analyst obsessed with</p>
+      <h1 class="hero-h1">
+        <span class="h1-line">discovering</span>
+        <span class="h1-line italic">new aspects</span>
+        <span class="h1-line">of AI &amp; using</span>
+        <span class="h1-line accent">them before</span>
+        <span class="h1-line">everyone else.</span>
       </h1>
-
-      <div class="hero-role-wrap" id="heroRole">
-        <span class="role-em">—</span>
-        <div class="role-box">
-          <span class="role-item">Transport Infrastructure Analytics</span>
-          <span class="role-item">AI-Enabled ERP Implementation</span>
-          <span class="role-item">Cloud Data Engineering</span>
-          <span class="role-item">Executive Performance Reporting</span>
-        </div>
-      </div>
-
-      <p class="hero-tagline" id="heroTagline">
-        Turning raw infrastructure data into decisions<br>that move the world forward.
-      </p>
-
-      <div class="hero-cta" id="heroCta">
-        <a href="#experience" class="btn-solid">View My Work</a>
-        <a href="#contact"    class="btn-ghost">Get In Touch</a>
+      <div class="hero-cta-row">
+        <a href="#contact" class="btn-black">Let's talk ↗</a>
+        <a href="#work" class="btn-outline">See my work</a>
       </div>
     </div>
 
-    <div class="hero-stats" id="heroStats">
-      <div class="hs-item">
-        <div class="hs-val"><span class="js-count" data-target="6">0</span>+</div>
-        <div class="hs-lbl">Years Experience</div>
+    <!-- Right col -->
+    <div class="hero-right">
+      <div class="now-box">
+        <div class="now-head">NOW</div>
+        <p>Building AI-enabled data pipelines at Amey Plc — making roads smarter one query at a time.</p>
+        <p>Exploring how LLMs can replace 80% of the meetings I sit through.</p>
+        <p>Open to freelance projects &amp; full-time roles that don't involve Excel macros from 2009.</p>
       </div>
-      <div class="hs-divider"></div>
-      <div class="hs-item">
-        <div class="hs-val"><span class="js-count" data-target="4">0</span></div>
-        <div class="hs-lbl">Industries Served</div>
-      </div>
-      <div class="hs-divider"></div>
-      <div class="hs-item">
-        <div class="hs-val"><span class="js-count" data-target="15">0</span>%</div>
-        <div class="hs-lbl">Efficiency Gained</div>
+      <div class="tag-stack">
+        <span>Power BI</span><span>Azure Databricks</span><span>Python</span>
+        <span>IFS WISE</span><span>Microsoft Fabric</span><span>PySpark</span>
       </div>
     </div>
 
-    <div class="scroll-cue" id="scrollCue">
-      <div class="sc-line-wrap"><div class="sc-line"></div></div>
-      <span>scroll</span>
-    </div>
   </section>
 
   <!-- ── MARQUEE ───────────────────────────────── -->
-  <div class="marquee-belt" aria-hidden="true">
+  <div class="marquee-belt">
     <div class="marquee-track">
-      <span>Transport Analytics</span><span class="sep">·</span>
-      <span>AI &amp; Data</span><span class="sep">·</span>
-      <span>Power BI</span><span class="sep">·</span>
-      <span>Azure Databricks</span><span class="sep">·</span>
-      <span>Digital Transformation</span><span class="sep">·</span>
-      <span>Microsoft Fabric</span><span class="sep">·</span>
-      <span>Oracle SQL</span><span class="sep">·</span>
-      <span>IFS WISE</span><span class="sep">·</span>
-      <span>Python</span><span class="sep">·</span>
-      <span>PySpark</span><span class="sep">·</span>
-      <!-- duplicate for seamless loop -->
-      <span>Transport Analytics</span><span class="sep">·</span>
-      <span>AI &amp; Data</span><span class="sep">·</span>
-      <span>Power BI</span><span class="sep">·</span>
-      <span>Azure Databricks</span><span class="sep">·</span>
-      <span>Digital Transformation</span><span class="sep">·</span>
-      <span>Microsoft Fabric</span><span class="sep">·</span>
-      <span>Oracle SQL</span><span class="sep">·</span>
-      <span>IFS WISE</span><span class="sep">·</span>
-      <span>Python</span><span class="sep">·</span>
-      <span>PySpark</span><span class="sep">·</span>
+      <span>TRANSPORT ANALYTICS</span><span class="sep">·</span>
+      <span>AI-ENABLED ERP</span><span class="sep">·</span>
+      <span>CLOUD DATA ENGINEERING</span><span class="sep">·</span>
+      <span>POWER BI</span><span class="sep">·</span>
+      <span>EXECUTIVE REPORTING</span><span class="sep">·</span>
+      <span>DIGITAL TRANSFORMATION</span><span class="sep">·</span>
+      <span>MICROSOFT FABRIC</span><span class="sep">·</span>
+      <span>ORACLE SQL</span><span class="sep">·</span>
+      <span>TRANSPORT ANALYTICS</span><span class="sep">·</span>
+      <span>AI-ENABLED ERP</span><span class="sep">·</span>
+      <span>CLOUD DATA ENGINEERING</span><span class="sep">·</span>
+      <span>POWER BI</span><span class="sep">·</span>
+      <span>EXECUTIVE REPORTING</span><span class="sep">·</span>
+      <span>DIGITAL TRANSFORMATION</span><span class="sep">·</span>
+      <span>MICROSOFT FABRIC</span><span class="sep">·</span>
+      <span>ORACLE SQL</span><span class="sep">·</span>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════ -->
-  <!-- ABOUT                                      -->
-  <!-- ══════════════════════════════════════════ -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="eyebrow">01 — About</div>
-      <div class="about-grid">
+  <!-- ════════════════════════════════════════════ -->
+  <!-- ABOUT                                         -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="section-head">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">About</h2>
+    </div>
 
-        <div class="about-left">
-          <h2 class="s-head js-reveal">I turn complex data<br>into <em>clear decisions.</em></h2>
-          <p class="body-copy">Data & Systems Analyst specialising in UK transport infrastructure analytics and digital transformation. I build scalable data solutions using Microsoft Fabric, Databricks, Oracle SQL, and Power BI to support complex operational environments.</p>
-          <p class="body-copy">Currently at <strong>Amey Plc</strong>, I'm driving AI-enabled ERP implementation — running schedule simulations, engineering cloud data pipelines, and delivering executive-ready insights across one of the UK's largest infrastructure programmes.</p>
-          <div class="contact-mini">
-            <a href="mailto:suujithramesh@gmail.com" class="txt-lnk">suujithramesh@gmail.com ↗</a>
-            <a href="tel:+447442601632"              class="txt-lnk">+44 7442 601632 ↗</a>
+    <div class="about-grid">
+
+      <div class="about-statement">
+        <p class="big-quote">
+          "I don't just analyse data — I find the bit that everyone missed and turn it into a decision."
+        </p>
+        <p class="body-copy">6 years across transport infrastructure, HR analytics, financial products, and retail. Each role taught me the same lesson: <strong>the problem is never what they think it is.</strong></p>
+        <p class="body-copy">Currently at <strong>Amey Plc</strong> — engineering AI-ready data pipelines, running schedule simulations for one of the UK's largest infrastructure programmes, and presenting the results to people who hate slides.</p>
+        <p class="body-copy">Outside of work I'm hunting for new AI capabilities that haven't been productised yet. If you've found something weird, let's talk.</p>
+      </div>
+
+      <div class="about-side">
+        <div class="award-card">
+          <div class="award-icon-big">⚡</div>
+          <div class="award-text">
+            <strong>Inspired by Insight Award</strong>
+            <span>Amey Plc · Staffordshire County Council</span>
+            <p>Recognised for analysis that directly changed operational decisions. Not just a slide deck.</p>
           </div>
         </div>
 
-        <div class="about-right">
-          <div class="about-card js-reveal">
-            <div class="award-row">
-              <div class="award-icon">⚡</div>
-              <div class="award-copy">
-                <strong>Inspired by Insight Award</strong>
-                <span>Amey Plc · Staffordshire County Council</span>
-              </div>
-            </div>
-            <div class="pill-group">
-              <span>Azure Databricks</span>
-              <span>Microsoft Fabric</span>
-              <span>Power BI</span>
-              <span>Oracle SQL</span>
-              <span>Python</span>
-              <span>IFS WISE</span>
-              <span>Power Automate</span>
-              <span>n8n</span>
-            </div>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-n">6+</div>
+            <div class="stat-l">Years of data</div>
           </div>
-
-          <div class="about-wolf-card js-reveal">
-            <img src="logo.png" alt="SVR" class="wolf-img">
-            <div class="wolf-loc">
-              <span class="pulse-dot orange"></span>
-              <span>United Kingdom</span>
-            </div>
+          <div class="stat">
+            <div class="stat-n">4</div>
+            <div class="stat-l">Industries</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">15%</div>
+            <div class="stat-l">Efficiency gained<br>(documented)</div>
           </div>
         </div>
 
+        <div class="edu-mini">
+          <div class="edu-row">
+            <span class="edu-yr">2024</span>
+            <span>MSc Business Analysis &amp; Consulting<br><em>University of Strathclyde</em></span>
+          </div>
+          <div class="edu-row">
+            <span class="edu-yr">2021</span>
+            <span>MBA<br><em>Amity University</em></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- WORK / EXPERIENCE                            -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="work" class="section work-section">
+    <div class="section-head">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">Work</h2>
+    </div>
+
+    <div class="work-list">
+
+      <div class="work-item" data-index="01">
+        <div class="work-top">
+          <div class="work-co">Amey Plc</div>
+          <div class="work-badge current">● Current</div>
+          <div class="work-period">Nov 2024 — Present</div>
+        </div>
+        <div class="work-role">Performance Data Analyst — AI &amp; Data</div>
+        <div class="work-body">
+          <p>Supporting the rollout of IFS WISE (AI-enabled ERP), engineering cloud data pipelines across Azure, Databricks, and Microsoft Fabric — then turning it all into dashboards that executives actually look at.</p>
+          <ul>
+            <li>Simulation modelling for roadworks planning and gang allocation</li>
+            <li>ETL pipelines from Oracle SQL → Azure Data Lake → Microsoft Fabric</li>
+            <li>Automated Power BI dashboards tracking fleet utilisation, compliance & cost KPIs</li>
+            <li>Power Automate + REST API workflows cutting manual reporting by a meaningful amount</li>
+          </ul>
+        </div>
+        <div class="work-tags">
+          <span>IFS WISE</span><span>Azure Databricks</span><span>Microsoft Fabric</span><span>Power BI</span><span>Oracle SQL</span><span>Power Automate</span>
+        </div>
+      </div>
+
+      <div class="work-item" data-index="02">
+        <div class="work-top">
+          <div class="work-co">RGIS</div>
+          <div class="work-period">Jan 2023 — Apr 2024</div>
+        </div>
+        <div class="work-role">Inventory Specialist</div>
+        <div class="work-body">
+          <p>Audited inventory across Sainsbury's, Apple, and Ted Baker. Found discrepancies, tracked trends, and proved that SQL is useful everywhere — including retail stockrooms.</p>
+          <ul>
+            <li>Inventory and sales analysis using SQL, Alteryx, and Excel</li>
+            <li>Demand forecasting and stock alignment across multiple brands</li>
+          </ul>
+        </div>
+        <div class="work-tags"><span>SQL</span><span>Alteryx</span><span>Excel</span></div>
+      </div>
+
+      <div class="work-item" data-index="03">
+        <div class="work-top">
+          <div class="work-co">Aleron Inc.</div>
+          <div class="work-period">Sep 2021 — Sep 2022</div>
+        </div>
+        <div class="work-role">HR Reporting Analyst</div>
+        <div class="work-body">
+          <p>Built predictive models to tackle employee turnover and optimise billable hours. Migrated data across SAP Fieldglass, Workday, and Work Nexus. Made HR analytics look interesting, which is harder than it sounds.</p>
+          <ul>
+            <li>Predictive DAX models in Power BI for workforce analytics</li>
+            <li>MI reports on absence, headcount, and quality of hire</li>
+          </ul>
+        </div>
+        <div class="work-tags"><span>Power BI</span><span>DAX</span><span>Workday</span><span>SAP Fieldglass</span><span>Cognos</span></div>
+      </div>
+
+      <div class="work-item" data-index="04">
+        <div class="work-top">
+          <div class="work-co">Wipro — RAK Bank</div>
+          <div class="work-period">Sep 2018 — Apr 2019</div>
+        </div>
+        <div class="work-role">Business Analyst · Loan Products</div>
+        <div class="work-body">
+          <p>Daily MI reports on credit card KPIs. Identified a 15% reduction in customer inquiry response time by fixing the loan origination process nobody had looked at properly in years.</p>
+          <ul>
+            <li>SQL + VBA automation for portfolio performance reporting</li>
+            <li>Gap analysis on end-to-end loan origination workflows</li>
+            <li>Agile stakeholder workshops and CRM (Zoho) improvements</li>
+          </ul>
+        </div>
+        <div class="work-tags"><span>SQL</span><span>VBA</span><span>Zoho CRM</span><span>Agile</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SKILLS                                        -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="section-head">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">Stack</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-col">
+        <h4>Cloud &amp; Engineering</h4>
+        <ul>
+          <li>Azure Data Lake</li>
+          <li>Azure Databricks</li>
+          <li>Microsoft Fabric (Gen2)</li>
+          <li>Data Warehouse</li>
+          <li>REST APIs / ETL</li>
+          <li>PySpark</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Analytics &amp; BI</h4>
+        <ul>
+          <li>Power BI</li>
+          <li>DAX + Power Query (M)</li>
+          <li>Cognos / IBM SPSS</li>
+          <li>Simu8 (Simulation)</li>
+          <li>Alteryx</li>
+          <li>Excel (advanced)</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Programming</h4>
+        <ul>
+          <li>Python (Pandas, sklearn, Matplotlib)</li>
+          <li>SQL / T-SQL / Oracle SQL</li>
+          <li>PySpark</li>
+          <li>VBA</li>
+          <li>JSON Prompting</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Platforms</h4>
+        <ul>
+          <li>IFS WISE (AI-ERP)</li>
+          <li>SAP Fieldglass / Concur</li>
+          <li>Workday / SuccessFactors</li>
+          <li>Power Automate</li>
+          <li>n8n</li>
+          <li>Brightly Confirm / JIRA</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Interest strip -->
+    <div class="interest-strip">
+      <div class="interest-label">CURRENTLY OBSESSED WITH</div>
+      <div class="interest-items">
+        <span>LLM pipeline design</span>
+        <span>AI-augmented operational workflows</span>
+        <span>Agentic data systems</span>
+        <span>n8n automation</span>
+        <span>Prompt engineering at scale</span>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════ -->
-  <!-- EXPERIENCE                                 -->
-  <!-- ══════════════════════════════════════════ -->
-  <section id="experience" class="section alt-bg">
-    <div class="container">
-      <div class="eyebrow">02 — Experience</div>
-      <h2 class="s-head js-reveal">Where I've <em>worked.</em></h2>
-
-      <div class="exp-list">
-
-        <div class="exp-item js-reveal">
-          <div class="exp-meta">
-            <div class="exp-idx">01</div>
-            <div class="exp-period">Nov 2024 — Present</div>
-            <span class="badge-now">Current</span>
-          </div>
-          <div class="exp-body">
-            <div class="exp-co">Amey Plc</div>
-            <div class="exp-role">Performance Data Analyst — AI & Data</div>
-            <ul class="exp-ul">
-              <li>Supported rollout of AI-enabled ERP platform (IFS WISE), conducting schedule simulations and scenario modelling to optimise roadworks planning and gang allocation.</li>
-              <li>Designed scalable data pipelines integrating Azure Data Lake, Databricks, and Microsoft Fabric (Gen2 Dataflows, Data Warehouse) with Oracle SQL and REST APIs.</li>
-              <li>Developed automated Power BI dashboards tracking fleet utilisation, asset renewal efficiency, compliance metrics, and cost indicators.</li>
-              <li>Built Power Automate + REST API workflows to reduce manual reporting intervention and strengthen data accuracy.</li>
-            </ul>
-            <div class="tag-row">
-              <span>Azure Databricks</span><span>Microsoft Fabric</span><span>Oracle SQL</span><span>Power BI</span><span>IFS WISE</span><span>Power Automate</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="exp-item js-reveal">
-          <div class="exp-meta">
-            <div class="exp-idx">02</div>
-            <div class="exp-period">Jan 2023 — Apr 2024</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-co">RGIS</div>
-            <div class="exp-role">Inventory Specialist</div>
-            <ul class="exp-ul">
-              <li>Conducted periodic audits across Sainsbury's, Apple, and Ted Baker, maintaining accurate inventory data in high-volume retail environments.</li>
-              <li>Analysed inventory and sales data using SQL, Alteryx, and Excel to identify purchasing trends and reduce shrinkage.</li>
-              <li>Contributed to inventory forecasting and demand planning across multiple retail brands.</li>
-            </ul>
-            <div class="tag-row"><span>SQL</span><span>Alteryx</span><span>Excel</span></div>
-          </div>
-        </div>
-
-        <div class="exp-item js-reveal">
-          <div class="exp-meta">
-            <div class="exp-idx">03</div>
-            <div class="exp-period">Sep 2021 — Sep 2022</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-co">Aleron Inc.</div>
-            <div class="exp-role">HR Reporting Analyst</div>
-            <ul class="exp-ul">
-              <li>Led HR analytics using Cognos, Avature, Workday, and SuccessFactors, focusing on employee turnover, quality of hire, and billable hours.</li>
-              <li>Built predictive models using complex DAX queries in Power BI to optimise billable hours and reduce employee turnover.</li>
-              <li>Supported configuration and data migration for SAP Fieldglass, Work Nexus, and Workday to produce MI reports on absence and headcount.</li>
-            </ul>
-            <div class="tag-row"><span>Power BI</span><span>DAX</span><span>Workday</span><span>SAP Fieldglass</span><span>Cognos</span></div>
-          </div>
-        </div>
-
-        <div class="exp-item js-reveal">
-          <div class="exp-meta">
-            <div class="exp-idx">04</div>
-            <div class="exp-period">Sep 2018 — Apr 2019</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-co">Wipro — RAK Bank</div>
-            <div class="exp-role">Business Analyst · Loan Products</div>
-            <ul class="exp-ul">
-              <li>Produced daily MI reports on credit card portfolio KPIs — utilisation rates, delinquency trends, acquisition metrics — using SQL and VBA automation.</li>
-              <li>Conducted gap analysis on loan origination workflows, driving a <strong>15% reduction</strong> in customer inquiry response time.</li>
-              <li>Facilitated stakeholder workshops and delivered Agile-aligned process improvements aligned to regulatory objectives.</li>
-            </ul>
-            <div class="tag-row"><span>SQL</span><span>VBA</span><span>Zoho CRM</span><span>Agile</span></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════ -->
-  <!-- SKILLS                                     -->
-  <!-- ══════════════════════════════════════════ -->
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="eyebrow">03 — Skills</div>
-      <h2 class="s-head js-reveal">My <em>toolkit.</em></h2>
-      <div class="skills-grid">
-
-        <div class="skill-block js-reveal">
-          <h4>Cloud & Data Engineering</h4>
-          <div class="pill-group">
-            <span>Azure Data Lake</span><span>Azure Databricks</span>
-            <span>Microsoft Fabric</span><span>Gen2 Dataflows</span>
-            <span>Data Warehouse</span><span>REST APIs</span>
-            <span>ETL Pipelines</span><span>PySpark</span>
-          </div>
-        </div>
-
-        <div class="skill-block js-reveal">
-          <h4>Analytics & Visualisation</h4>
-          <div class="pill-group">
-            <span>Power BI</span><span>DAX</span>
-            <span>Power Query (M)</span><span>Cognos</span>
-            <span>Simu8</span><span>IBM SPSS</span>
-            <span>Excel</span><span>Alteryx</span>
-          </div>
-        </div>
-
-        <div class="skill-block js-reveal">
-          <h4>Programming</h4>
-          <div class="pill-group">
-            <span>Python</span><span>Pandas</span>
-            <span>scikit-learn</span><span>Matplotlib</span>
-            <span>SQL / T-SQL</span><span>PySpark</span>
-            <span>JSON Prompting</span><span>VBA</span>
-          </div>
-        </div>
-
-        <div class="skill-block js-reveal">
-          <h4>Enterprise Platforms</h4>
-          <div class="pill-group">
-            <span>IFS WISE</span><span>SAP Fieldglass</span>
-            <span>SAP Concur</span><span>Workday</span>
-            <span>Power Automate</span><span>n8n</span>
-            <span>Brightly Confirm</span><span>JIRA</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════ -->
-  <!-- EDUCATION                                  -->
-  <!-- ══════════════════════════════════════════ -->
-  <section id="education" class="section alt-bg">
-    <div class="container">
-      <div class="eyebrow">04 — Education</div>
-      <h2 class="s-head js-reveal">Academic <em>foundation.</em></h2>
-      <div class="edu-list">
-
-        <div class="edu-item js-reveal">
-          <div class="edu-yr">2022 — 2024</div>
-          <div class="edu-body">
-            <h3>MSc Business Analysis &amp; Consulting</h3>
-            <p class="edu-school">University of Strathclyde · Glasgow, UK</p>
-            <p class="edu-mods">Statistics & Probability · Business Analytics · Simulation Methods · Operational Research · Performance Management · Spreadsheet Modelling</p>
-          </div>
-        </div>
-
-        <div class="edu-item js-reveal">
-          <div class="edu-yr">2019 — 2021</div>
-          <div class="edu-body">
-            <h3>Master of Business Administration (MBA)</h3>
-            <p class="edu-school">Amity University</p>
-            <p class="edu-mods">Global Marketing · Human Resource Development · International Business · Managerial Economics · Statistics for Management</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════ -->
-  <!-- CONTACT                                    -->
-  <!-- ══════════════════════════════════════════ -->
+  <!-- ════════════════════════════════════════════ -->
+  <!-- CONTACT                                       -->
+  <!-- ════════════════════════════════════════════ -->
   <section id="contact" class="section contact-section">
-    <div class="contact-glow" aria-hidden="true"></div>
-    <div class="container">
-      <div class="eyebrow">05 — Contact</div>
-      <div class="contact-inner">
+    <div class="section-head">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Hire Me</h2>
+    </div>
 
-        <h2 class="contact-head js-reveal">
-          Let's build<br>something <em>meaningful.</em>
-        </h2>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h3 class="contact-h">Got a problem<br>that needs a <em>fix</em><br>— not a report?</h3>
+        <p class="body-copy">I'm open to full-time roles and freelance projects. Especially interested in anything where AI is either the tool or the territory.</p>
+        <p class="body-copy">If you want someone who'll actually dig into your data and tell you what's wrong — not just format it nicely — let's talk.</p>
+      </div>
 
-        <div class="contact-links">
-          <a href="mailto:suujithramesh@gmail.com" class="c-lnk js-reveal">
-            <span class="c-label">Email</span>
-            <span class="c-val">suujithramesh@gmail.com <span class="arr">↗</span></span>
-          </a>
-          <a href="tel:+447442601632" class="c-lnk js-reveal">
-            <span class="c-label">Phone</span>
-            <span class="c-val">+44 7442 601632 <span class="arr">↗</span></span>
-          </a>
-          <a href="https://linkedin.com/in/suujith-vathsaa" class="c-lnk js-reveal" target="_blank" rel="noopener">
-            <span class="c-label">LinkedIn</span>
-            <span class="c-val">Suujith Vathsaa <span class="arr">↗</span></span>
-          </a>
-        </div>
+      <div class="contact-right">
+        <a href="mailto:suujithramesh@gmail.com" class="c-row">
+          <span class="c-type">EMAIL</span>
+          <span class="c-val">suujithramesh@gmail.com ↗</span>
+        </a>
+        <a href="tel:+447442601632" class="c-row">
+          <span class="c-type">PHONE</span>
+          <span class="c-val">+44 7442 601632 ↗</span>
+        </a>
+        <a href="https://linkedin.com/in/suujith-vathsaa" target="_blank" rel="noopener" class="c-row">
+          <span class="c-type">LINKEDIN</span>
+          <span class="c-val">Suujith Vathsaa ↗</span>
+        </a>
+        <a href="https://github.com/SuujithVathsaa" target="_blank" rel="noopener" class="c-row">
+          <span class="c-type">GITHUB</span>
+          <span class="c-val">SuujithVathsaa ↗</span>
+        </a>
 
+        <a href="mailto:suujithramesh@gmail.com" class="big-cta">START A CONVERSATION ↗</a>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ───────────────────────────────── -->
+  <!-- ── FOOTER ──────────────────────────────────── -->
   <footer class="footer">
-    <img src="logo.png" alt="SVR" class="footer-wolf">
-    <p>© 2026 Suujith Vathsaa Ramesh. All rights reserved.</p>
+    <div class="footer-left">
+      <img src="logo.png" alt="SVR" class="footer-wolf">
+      <span>SVR © 2026</span>
+    </div>
+    <div class="footer-center">Data Analyst · AI Explorer · Problem Dissolver</div>
     <div class="footer-right">
       <a href="mailto:suujithramesh@gmail.com">Email</a>
       <a href="https://linkedin.com/in/suujith-vathsaa" target="_blank">LinkedIn</a>
+      <a href="https://github.com/SuujithVathsaa" target="_blank">GitHub</a>
     </div>
   </footer>
 
-  <!-- ── SCRIPTS ──────────────────────────────── -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
