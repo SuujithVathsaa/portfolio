@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SVR — Data Analyst. AI Explorer. Problem Dissolver.</title>
-  <meta name="description" content="Suujith Vathsaa Ramesh. Performance Data Analyst specialising in AI, transport infrastructure, and finding the signal in all the noise.">
+  <title>SVR — Problem Solver. AI Weapon. Modern Fix.</title>
+  <meta name="description" content="Suujith Vathsaa Ramesh. I don't analyse data. I find what's broken and fix it using whatever modern tool does it fastest.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -12,390 +12,514 @@
 </head>
 <body>
 
-  <!-- ── TICKER ──────────────────────────────── -->
+  <!-- ── TOP TICKER ──────────────────────────── -->
   <div class="top-ticker">
     <div class="ticker-track">
-      <span>OPEN TO FULL-TIME &amp; FREELANCE</span>
-      <span class="t-dot">◆</span>
-      <span>AI + DATA ANALYST</span>
-      <span class="t-dot">◆</span>
-      <span>UK BASED · REMOTE FRIENDLY</span>
-      <span class="t-dot">◆</span>
-      <span>CURRENTLY @ AMEY PLC</span>
-      <span class="t-dot">◆</span>
-      <span>BREAKING THINGS WITH AI SINCE 2018</span>
-      <span class="t-dot">◆</span>
-      <span>OPEN TO FULL-TIME &amp; FREELANCE</span>
-      <span class="t-dot">◆</span>
-      <span>AI + DATA ANALYST</span>
-      <span class="t-dot">◆</span>
-      <span>UK BASED · REMOTE FRIENDLY</span>
-      <span class="t-dot">◆</span>
-      <span>CURRENTLY @ AMEY PLC</span>
-      <span class="t-dot">◆</span>
-      <span>BREAKING THINGS WITH AI SINCE 2018</span>
-      <span class="t-dot">◆</span>
+      <span>OPEN TO FULL-TIME &amp; FREELANCE</span><span class="t-sep">◆</span>
+      <span>PROBLEM SOLVER · NOT A REPORT MAKER</span><span class="t-sep">◆</span>
+      <span>UK BASED · REMOTE READY</span><span class="t-sep">◆</span>
+      <span>CURRENTLY BREAKING THINGS @ AMEY PLC</span><span class="t-sep">◆</span>
+      <span>AI TOOLS BEFORE THEY'RE COOL</span><span class="t-sep">◆</span>
+      <span>OPEN TO FULL-TIME &amp; FREELANCE</span><span class="t-sep">◆</span>
+      <span>PROBLEM SOLVER · NOT A REPORT MAKER</span><span class="t-sep">◆</span>
+      <span>UK BASED · REMOTE READY</span><span class="t-sep">◆</span>
+      <span>CURRENTLY BREAKING THINGS @ AMEY PLC</span><span class="t-sep">◆</span>
+      <span>AI TOOLS BEFORE THEY'RE COOL</span><span class="t-sep">◆</span>
     </div>
   </div>
 
-  <!-- ── NAV ───────────────────────────────────── -->
-  <header class="nav">
+  <!-- ── NAV ───────────────────────────────── -->
+  <header class="nav" id="nav">
     <a href="#hero" class="nav-brand">
-      <img src="logo.png" alt="SVR" class="nav-wolf">
-      <span>SVR</span>
+      <div class="nav-logo-box">
+        <img src="logo.png" alt="SVR" class="nav-wolf" id="navWolf">
+      </div>
+      <span class="brand-text">SVR</span>
     </a>
 
-    <nav class="nav-center">
+    <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#work">Work</a>
-      <a href="#skills">Stack</a>
+      <a href="#sketchbook">Stack</a>
       <a href="#contact">Hire Me</a>
     </nav>
 
-    <div class="nav-status">
-      <span class="status-dot"></span>
-      <span>Available for work</span>
+    <div class="nav-right">
+      <div class="nav-status">
+        <span class="live-dot"></span>
+        <span>Available now</span>
+      </div>
     </div>
 
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger">
       <span></span><span></span>
     </button>
   </header>
 
-  <!-- ── MOBILE MENU ───────────────────────────── -->
+  <!-- ── MOB MENU ──────────────────────────── -->
   <div class="mob-menu" id="mobMenu">
-    <a href="#about"   class="mob-lnk">About</a>
-    <a href="#work"    class="mob-lnk">Work</a>
-    <a href="#skills"  class="mob-lnk">Stack</a>
-    <a href="#contact" class="mob-lnk">Hire Me</a>
+    <a href="#about"      class="mob-lnk">About</a>
+    <a href="#work"       class="mob-lnk">Work</a>
+    <a href="#sketchbook" class="mob-lnk">Stack</a>
+    <a href="#contact"    class="mob-lnk">Hire Me</a>
   </div>
 
-  <!-- ════════════════════════════════════════════ -->
-  <!-- HERO                                         -->
-  <!-- ════════════════════════════════════════════ -->
-  <section id="hero" class="hero">
+  <!-- ════════════════════════════════════════ -->
+  <!-- HERO — exact NoGood split layout        -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="hero" class="hero-split">
 
-    <!-- Left col -->
-    <div class="hero-left">
-      <div class="wolf-frame">
-        <img src="logo.png" alt="SVR Wolf" class="hero-wolf">
-        <div class="wolf-label">SUUJITH<br>VATHSAA<br>RAMESH</div>
-      </div>
-    </div>
-
-    <!-- Center col -->
-    <div class="hero-center">
-      <p class="hero-intro">I'm a data analyst obsessed with</p>
+    <!-- Left: massive statement -->
+    <div class="hero-text-col">
+      <p class="hero-sub">I'm a problem solver who uses</p>
       <h1 class="hero-h1">
-        <span class="h1-line">discovering</span>
-        <span class="h1-line italic">new aspects</span>
-        <span class="h1-line">of AI &amp; using</span>
-        <span class="h1-line accent">them before</span>
-        <span class="h1-line">everyone else.</span>
+        modern tools<br>
+        <em>to fix what</em><br>
+        everyone else<br>
+        <span class="h1-highlight">just reports.</span>
       </h1>
-      <div class="hero-cta-row">
-        <a href="#contact" class="btn-black">Let's talk ↗</a>
-        <a href="#work" class="btn-outline">See my work</a>
+      <div class="hero-actions">
+        <a href="#work" class="btn-primary">See the work ↗</a>
+        <a href="#contact" class="btn-sec">Hire me</a>
       </div>
     </div>
 
-    <!-- Right col -->
-    <div class="hero-right">
-      <div class="now-box">
-        <div class="now-head">NOW</div>
-        <p>Building AI-enabled data pipelines at Amey Plc — making roads smarter one query at a time.</p>
-        <p>Exploring how LLMs can replace 80% of the meetings I sit through.</p>
-        <p>Open to freelance projects &amp; full-time roles that don't involve Excel macros from 2009.</p>
+    <!-- Right: wolf + now box -->
+    <div class="hero-wolf-col">
+      <div class="wolf-scene">
+        <img src="logo.png" alt="SVR Wolf" class="wolf-hero" id="wolfHero">
+        <div class="wolf-glow" id="wolfGlow"></div>
       </div>
-      <div class="tag-stack">
-        <span>Power BI</span><span>Azure Databricks</span><span>Python</span>
-        <span>IFS WISE</span><span>Microsoft Fabric</span><span>PySpark</span>
+      <div class="now-panel">
+        <div class="now-tag">NOW</div>
+        <p>Building AI-enabled pipelines at Amey Plc.<br>Making roads smarter, one query at a time.</p>
+        <p>Hunting AI capabilities that haven't been productised yet.</p>
+        <p>Open to work that needs a <strong>fix</strong>, not a slide deck.</p>
       </div>
     </div>
 
   </section>
 
-  <!-- ── MARQUEE ───────────────────────────────── -->
-  <div class="marquee-belt">
-    <div class="marquee-track">
-      <span>TRANSPORT ANALYTICS</span><span class="sep">·</span>
-      <span>AI-ENABLED ERP</span><span class="sep">·</span>
-      <span>CLOUD DATA ENGINEERING</span><span class="sep">·</span>
-      <span>POWER BI</span><span class="sep">·</span>
-      <span>EXECUTIVE REPORTING</span><span class="sep">·</span>
-      <span>DIGITAL TRANSFORMATION</span><span class="sep">·</span>
-      <span>MICROSOFT FABRIC</span><span class="sep">·</span>
-      <span>ORACLE SQL</span><span class="sep">·</span>
-      <span>TRANSPORT ANALYTICS</span><span class="sep">·</span>
-      <span>AI-ENABLED ERP</span><span class="sep">·</span>
-      <span>CLOUD DATA ENGINEERING</span><span class="sep">·</span>
-      <span>POWER BI</span><span class="sep">·</span>
-      <span>EXECUTIVE REPORTING</span><span class="sep">·</span>
-      <span>DIGITAL TRANSFORMATION</span><span class="sep">·</span>
-      <span>MICROSOFT FABRIC</span><span class="sep">·</span>
-      <span>ORACLE SQL</span><span class="sep">·</span>
+  <!-- ── MARQUEE ───────────────────────────── -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <span>TRANSPORT ANALYTICS</span><span class="m-dot">·</span>
+      <span>AI-ENABLED ERP</span><span class="m-dot">·</span>
+      <span>POWER BI</span><span class="m-dot">·</span>
+      <span>AZURE DATABRICKS</span><span class="m-dot">·</span>
+      <span>DIGITAL TRANSFORMATION</span><span class="m-dot">·</span>
+      <span>MICROSOFT FABRIC</span><span class="m-dot">·</span>
+      <span>PYTHON · PYSPARK</span><span class="m-dot">·</span>
+      <span>ORACLE SQL</span><span class="m-dot">·</span>
+      <span>TRANSPORT ANALYTICS</span><span class="m-dot">·</span>
+      <span>AI-ENABLED ERP</span><span class="m-dot">·</span>
+      <span>POWER BI</span><span class="m-dot">·</span>
+      <span>AZURE DATABRICKS</span><span class="m-dot">·</span>
+      <span>DIGITAL TRANSFORMATION</span><span class="m-dot">·</span>
+      <span>MICROSOFT FABRIC</span><span class="m-dot">·</span>
+      <span>PYTHON · PYSPARK</span><span class="m-dot">·</span>
+      <span>ORACLE SQL</span><span class="m-dot">·</span>
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════ -->
-  <!-- ABOUT                                         -->
-  <!-- ════════════════════════════════════════════ -->
-  <section id="about" class="section about-section">
-    <div class="section-head">
-      <span class="sec-num">01</span>
-      <h2 class="sec-title">About</h2>
+  <!-- ════════════════════════════════════════ -->
+  <!-- ABOUT — NoGood about split style        -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="about" class="about-split">
+
+    <div class="about-statement-col">
+      <div class="sec-label">01 — ABOUT</div>
+      <p class="about-big">
+        My solutions, through the pipelines I build and the AI systems I deploy, are informed by one idea: <strong>problems don't need more data — they need the right answer.</strong>
+      </p>
     </div>
 
-    <div class="about-grid">
+    <div class="about-detail-col">
+      <p class="body-p">6 years across transport infrastructure, HR analytics, financial products, and retail. Each role taught me the same lesson: the problem is never what they think it is.</p>
+      <p class="body-p">Currently at <strong>Amey Plc</strong> — engineering AI-ready data pipelines, running schedule simulations for one of the UK's largest infrastructure programmes, and winning awards for it.</p>
+      <p class="body-p">Outside work I'm reverse-engineering new AI capabilities before everyone else figures out they exist. If you've found something weird, let's talk.</p>
 
-      <div class="about-statement">
-        <p class="big-quote">
-          "I don't just analyse data — I find the bit that everyone missed and turn it into a decision."
-        </p>
-        <p class="body-copy">6 years across transport infrastructure, HR analytics, financial products, and retail. Each role taught me the same lesson: <strong>the problem is never what they think it is.</strong></p>
-        <p class="body-copy">Currently at <strong>Amey Plc</strong> — engineering AI-ready data pipelines, running schedule simulations for one of the UK's largest infrastructure programmes, and presenting the results to people who hate slides.</p>
-        <p class="body-copy">Outside of work I'm hunting for new AI capabilities that haven't been productised yet. If you've found something weird, let's talk.</p>
+      <div class="award-strip">
+        <span class="award-bolt">⚡</span>
+        <div>
+          <strong>Inspired by Insight Award</strong>
+          <span>Amey Plc · Staffordshire County Council — for analysis that actually changed decisions</span>
+        </div>
       </div>
 
-      <div class="about-side">
-        <div class="award-card">
-          <div class="award-icon-big">⚡</div>
-          <div class="award-text">
-            <strong>Inspired by Insight Award</strong>
-            <span>Amey Plc · Staffordshire County Council</span>
-            <p>Recognised for analysis that directly changed operational decisions. Not just a slide deck.</p>
-          </div>
+      <div class="stat-band">
+        <div class="stat-unit">
+          <strong>6+</strong><span>Years solving problems</span>
         </div>
+        <div class="stat-unit">
+          <strong>4</strong><span>Industries disrupted</span>
+        </div>
+        <div class="stat-unit">
+          <strong>15%</strong><span>Efficiency gained (on record)</span>
+        </div>
+      </div>
+    </div>
 
-        <div class="stat-row">
-          <div class="stat">
-            <div class="stat-n">6+</div>
-            <div class="stat-l">Years of data</div>
-          </div>
-          <div class="stat">
-            <div class="stat-n">4</div>
-            <div class="stat-l">Industries</div>
-          </div>
-          <div class="stat">
-            <div class="stat-n">15%</div>
-            <div class="stat-l">Efficiency gained<br>(documented)</div>
-          </div>
-        </div>
+  </section>
 
-        <div class="edu-mini">
-          <div class="edu-row">
-            <span class="edu-yr">2024</span>
-            <span>MSc Business Analysis &amp; Consulting<br><em>University of Strathclyde</em></span>
-          </div>
-          <div class="edu-row">
-            <span class="edu-yr">2021</span>
-            <span>MBA<br><em>Amity University</em></span>
-          </div>
+  <!-- ════════════════════════════════════════ -->
+  <!-- SKETCHBOOK — exact NoGood grid layout   -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="sketchbook" class="sketchbook-section">
+    <div class="sk-header">
+      <h2 class="sk-title">STACK &amp; TOOLS</h2>
+    </div>
+
+    <!-- NoGood-style masonry grid with SVG illustrations -->
+    <div class="sk-grid">
+
+      <div class="sk-cell sk-cell--wide sk-cell--dark">
+        <div class="sk-img-wrap">
+          <!-- Isometric data pipeline SVG -->
+          <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" class="sk-svg">
+            <rect width="600" height="400" fill="#1a1a1a"/>
+            <!-- Grid lines -->
+            <line x1="0" y1="80" x2="600" y2="80" stroke="#333" stroke-width="1"/>
+            <line x1="0" y1="160" x2="600" y2="160" stroke="#333" stroke-width="1"/>
+            <line x1="0" y1="240" x2="600" y2="240" stroke="#333" stroke-width="1"/>
+            <line x1="0" y1="320" x2="600" y2="320" stroke="#333" stroke-width="1"/>
+            <line x1="100" y1="0" x2="100" y2="400" stroke="#333" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="#333" stroke-width="1"/>
+            <line x1="300" y1="0" x2="300" y2="400" stroke="#333" stroke-width="1"/>
+            <line x1="400" y1="0" x2="400" y2="400" stroke="#333" stroke-width="1"/>
+            <line x1="500" y1="0" x2="500" y2="400" stroke="#333" stroke-width="1"/>
+            <!-- Azure box -->
+            <rect x="40" y="60" width="120" height="80" fill="#E8650A" rx="2"/>
+            <rect x="50" y="70" width="100" height="60" fill="#1a1a1a" rx="1"/>
+            <text x="100" y="107" fill="#E8650A" font-family="Space Mono" font-size="10" text-anchor="middle">AZURE</text>
+            <text x="100" y="120" fill="#E8650A" font-family="Space Mono" font-size="9" text-anchor="middle">DATABRICKS</text>
+            <!-- Arrow -->
+            <line x1="165" y1="100" x2="230" y2="100" stroke="#C8FF00" stroke-width="2"/>
+            <polygon points="230,95 240,100 230,105" fill="#C8FF00"/>
+            <!-- Fabric box -->
+            <rect x="240" y="60" width="120" height="80" fill="#C8FF00" rx="2"/>
+            <rect x="250" y="70" width="100" height="60" fill="#1a1a1a" rx="1"/>
+            <text x="300" y="107" fill="#C8FF00" font-family="Space Mono" font-size="10" text-anchor="middle">MICROSOFT</text>
+            <text x="300" y="120" fill="#C8FF00" font-family="Space Mono" font-size="9" text-anchor="middle">FABRIC</text>
+            <!-- Arrow -->
+            <line x1="365" y1="100" x2="430" y2="100" stroke="#C8FF00" stroke-width="2"/>
+            <polygon points="430,95 440,100 430,105" fill="#C8FF00"/>
+            <!-- Power BI box -->
+            <rect x="440" y="60" width="120" height="80" fill="#fff" rx="2"/>
+            <rect x="450" y="70" width="100" height="60" fill="#1a1a1a" rx="1"/>
+            <text x="500" y="107" fill="#fff" font-family="Space Mono" font-size="10" text-anchor="middle">POWER BI</text>
+            <text x="500" y="120" fill="#888" font-family="Space Mono" font-size="9" text-anchor="middle">DASHBOARDS</text>
+            <!-- Bottom row: chips -->
+            <rect x="60" y="200" width="80" height="80" fill="none" stroke="#E8650A" stroke-width="2"/>
+            <text x="100" y="245" fill="#E8650A" font-family="Space Mono" font-size="9" text-anchor="middle">ORACLE SQL</text>
+            <rect x="180" y="200" width="80" height="80" fill="none" stroke="#C8FF00" stroke-width="2"/>
+            <text x="220" y="245" fill="#C8FF00" font-family="Space Mono" font-size="9" text-anchor="middle">PYSPARK</text>
+            <rect x="300" y="200" width="80" height="80" fill="none" stroke="#fff" stroke-width="2"/>
+            <text x="340" y="245" fill="#fff" font-family="Space Mono" font-size="9" text-anchor="middle">PYTHON</text>
+            <rect x="420" y="200" width="80" height="80" fill="none" stroke="#888" stroke-width="2"/>
+            <text x="460" y="245" fill="#888" font-family="Space Mono" font-size="9" text-anchor="middle">IFS WISE</text>
+            <!-- Label -->
+            <text x="300" y="370" fill="#555" font-family="Space Mono" font-size="11" text-anchor="middle" letter-spacing="4">CLOUD DATA ENGINEERING STACK</text>
+          </svg>
         </div>
+        <div class="sk-label">Cloud Engineering</div>
+      </div>
+
+      <div class="sk-cell sk-cell--lime">
+        <div class="sk-img-wrap">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="sk-svg">
+            <rect width="400" height="400" fill="#C8FF00"/>
+            <!-- Brain/AI circuit -->
+            <circle cx="200" cy="180" r="100" fill="none" stroke="#0A0A0A" stroke-width="3"/>
+            <circle cx="200" cy="180" r="70" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+            <!-- nodes -->
+            <circle cx="200" cy="80" r="8" fill="#0A0A0A"/>
+            <circle cx="280" cy="130" r="8" fill="#0A0A0A"/>
+            <circle cx="280" cy="230" r="8" fill="#0A0A0A"/>
+            <circle cx="200" cy="280" r="8" fill="#0A0A0A"/>
+            <circle cx="120" cy="230" r="8" fill="#0A0A0A"/>
+            <circle cx="120" cy="130" r="8" fill="#0A0A0A"/>
+            <line x1="200" y1="80" x2="280" y2="130" stroke="#0A0A0A" stroke-width="2"/>
+            <line x1="280" y1="130" x2="280" y2="230" stroke="#0A0A0A" stroke-width="2"/>
+            <line x1="280" y1="230" x2="200" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+            <line x1="200" y1="280" x2="120" y2="230" stroke="#0A0A0A" stroke-width="2"/>
+            <line x1="120" y1="230" x2="120" y2="130" stroke="#0A0A0A" stroke-width="2"/>
+            <line x1="120" y1="130" x2="200" y2="80" stroke="#0A0A0A" stroke-width="2"/>
+            <line x1="200" y1="80" x2="200" y2="280" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="4"/>
+            <line x1="120" y1="130" x2="280" y2="230" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="4"/>
+            <line x1="280" y1="130" x2="120" y2="230" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="4"/>
+            <text x="200" y="185" fill="#0A0A0A" font-family="Space Mono" font-size="11" text-anchor="middle" font-weight="700">AI</text>
+            <text x="200" y="360" fill="#0A0A0A" font-family="Space Mono" font-size="10" text-anchor="middle" letter-spacing="3">MACHINE LEARNING</text>
+          </svg>
+        </div>
+        <div class="sk-label">AI &amp; ML</div>
+      </div>
+
+      <div class="sk-cell sk-cell--dark">
+        <div class="sk-img-wrap">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="sk-svg">
+            <rect width="400" height="400" fill="#111"/>
+            <!-- Dashboard mockup -->
+            <rect x="30" y="40" width="340" height="240" fill="#1a1a1a" stroke="#E8650A" stroke-width="2" rx="3"/>
+            <rect x="40" y="55" width="90" height="60" fill="#E8650A" rx="2"/>
+            <rect x="145" y="55" width="90" height="60" fill="#222" stroke="#C8FF00" stroke-width="1" rx="2"/>
+            <rect x="250" y="55" width="90" height="60" fill="#222" stroke="#444" stroke-width="1" rx="2"/>
+            <!-- Bar chart -->
+            <rect x="50" y="160" width="25" height="90" fill="#E8650A"/>
+            <rect x="85" y="185" width="25" height="65" fill="#E8650A" opacity=".7"/>
+            <rect x="120" y="145" width="25" height="105" fill="#C8FF00"/>
+            <rect x="155" y="170" width="25" height="80" fill="#C8FF00" opacity=".6"/>
+            <rect x="190" y="155" width="25" height="95" fill="#E8650A" opacity=".5"/>
+            <rect x="225" y="175" width="25" height="75" fill="#888"/>
+            <rect x="260" y="165" width="25" height="85" fill="#C8FF00" opacity=".4"/>
+            <rect x="295" y="150" width="25" height="100" fill="#E8650A" opacity=".8"/>
+            <!-- Label -->
+            <text x="40" y="310" fill="#E8650A" font-family="Space Mono" font-size="9" letter-spacing="2">KPI TRACKING</text>
+            <text x="40" y="325" fill="#555" font-family="Space Mono" font-size="8">FLEET · COMPLIANCE · COST</text>
+            <text x="200" y="375" fill="#444" font-family="Space Mono" font-size="9" text-anchor="middle" letter-spacing="3">POWER BI DASHBOARDS</text>
+          </svg>
+        </div>
+        <div class="sk-label">Power BI</div>
+      </div>
+
+      <div class="sk-cell sk-cell--orange sk-cell--tall">
+        <div class="sk-img-wrap">
+          <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" class="sk-svg">
+            <rect width="400" height="600" fill="#E8650A"/>
+            <!-- Code terminal -->
+            <rect x="30" y="60" width="340" height="480" fill="#0A0A0A" rx="4" stroke="#fff" stroke-width="1"/>
+            <rect x="30" y="60" width="340" height="32" fill="#1a1a1a" rx="4"/>
+            <circle cx="55" cy="76" r="7" fill="#FF5F57"/>
+            <circle cx="78" cy="76" r="7" fill="#FFBD2E"/>
+            <circle cx="101" cy="76" r="7" fill="#28CA42"/>
+            <!-- Code lines -->
+            <text x="50" y="125" fill="#888" font-family="Space Mono" font-size="11">import pandas as pd</text>
+            <text x="50" y="148" fill="#888" font-family="Space Mono" font-size="11">import pyspark</text>
+            <text x="50" y="171" fill="#C8FF00" font-family="Space Mono" font-size="11">from azure.storage</text>
+            <text x="50" y="194" fill="#C8FF00" font-family="Space Mono" font-size="11">  import DataLake</text>
+            <text x="50" y="217" fill="#888" font-family="Space Mono" font-size="11">&nbsp;</text>
+            <text x="50" y="240" fill="#E8650A" font-family="Space Mono" font-size="11">def solve_problem(</text>
+            <text x="50" y="263" fill="#E8650A" font-family="Space Mono" font-size="11">  data, method):</text>
+            <text x="50" y="286" fill="#fff" font-family="Space Mono" font-size="11">  # skip the report</text>
+            <text x="50" y="309" fill="#fff" font-family="Space Mono" font-size="11">  return answer</text>
+            <text x="50" y="332" fill="#888" font-family="Space Mono" font-size="11">&nbsp;</text>
+            <text x="50" y="355" fill="#C8FF00" font-family="Space Mono" font-size="11">result = solve_problem(</text>
+            <text x="50" y="378" fill="#C8FF00" font-family="Space Mono" font-size="11">  infrastructure_data,</text>
+            <text x="50" y="401" fill="#C8FF00" font-family="Space Mono" font-size="11">  method="AI"</text>
+            <text x="50" y="424" fill="#C8FF00" font-family="Space Mono" font-size="11">)</text>
+            <text x="50" y="460" fill="#555" font-family="Space Mono" font-size="10">▋</text>
+          </svg>
+        </div>
+        <div class="sk-label">Python / PySpark</div>
+      </div>
+
+      <div class="sk-cell sk-cell--white">
+        <div class="sk-img-wrap">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="sk-svg">
+            <rect width="400" height="300" fill="#F5F5F0"/>
+            <!-- Workflow nodes -->
+            <rect x="20" y="120" width="70" height="50" fill="#0A0A0A" rx="2"/>
+            <text x="55" y="150" fill="#C8FF00" font-family="Space Mono" font-size="8" text-anchor="middle">ORACLE</text>
+            <text x="55" y="162" fill="#C8FF00" font-family="Space Mono" font-size="7" text-anchor="middle">SQL</text>
+            <!-- arrows -->
+            <line x1="92" y1="145" x2="120" y2="145" stroke="#0A0A0A" stroke-width="2"/>
+            <polygon points="118,140 128,145 118,150" fill="#0A0A0A"/>
+            <rect x="130" y="120" width="70" height="50" fill="#0A0A0A" rx="2"/>
+            <text x="165" y="150" fill="#E8650A" font-family="Space Mono" font-size="8" text-anchor="middle">POWER</text>
+            <text x="165" y="162" fill="#E8650A" font-family="Space Mono" font-size="7" text-anchor="middle">AUTOMATE</text>
+            <line x1="202" y1="145" x2="230" y2="145" stroke="#0A0A0A" stroke-width="2"/>
+            <polygon points="228,140 238,145 228,150" fill="#0A0A0A"/>
+            <rect x="240" y="120" width="70" height="50" fill="#0A0A0A" rx="2"/>
+            <text x="275" y="150" fill="#fff" font-family="Space Mono" font-size="8" text-anchor="middle">REST API</text>
+            <line x1="312" y1="145" x2="340" y2="145" stroke="#0A0A0A" stroke-width="2"/>
+            <polygon points="338,140 348,145 338,150" fill="#0A0A0A"/>
+            <rect x="350" y="120" width="30" height="50" fill="#C8FF00" rx="2"/>
+            <text x="365" y="152" fill="#0A0A0A" font-family="Space Mono" font-size="7" text-anchor="middle">n8n</text>
+            <text x="200" y="240" fill="#0A0A0A" font-family="Space Mono" font-size="9" text-anchor="middle" letter-spacing="2">WORKFLOW AUTOMATION</text>
+          </svg>
+        </div>
+        <div class="sk-label">Automation</div>
+      </div>
+
+      <div class="sk-cell sk-cell--dark">
+        <div class="sk-img-wrap">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="sk-svg">
+            <rect width="400" height="300" fill="#0A0A0A"/>
+            <!-- IFS WISE simulation -->
+            <text x="200" y="60" fill="#C8FF00" font-family="Space Mono" font-size="13" text-anchor="middle" letter-spacing="4" font-weight="700">IFS WISE</text>
+            <text x="200" y="82" fill="#555" font-family="Space Mono" font-size="9" text-anchor="middle" letter-spacing="2">AI-SCHEDULING PLATFORM</text>
+            <!-- Gantt-like bars -->
+            <rect x="30" y="105" width="180" height="18" fill="#E8650A" rx="1"/>
+            <text x="40" y="118" fill="#0A0A0A" font-family="Space Mono" font-size="8">GANG A · ROADWORKS A1</text>
+            <rect x="30" y="132" width="120" height="18" fill="#E8650A" opacity=".7" rx="1"/>
+            <text x="40" y="145" fill="#0A0A0A" font-family="Space Mono" font-size="8">GANG B · MAINTENANCE</text>
+            <rect x="160" y="132" width="160" height="18" fill="#C8FF00" rx="1"/>
+            <text x="170" y="145" fill="#0A0A0A" font-family="Space Mono" font-size="8">GANG C · RESURFACING</text>
+            <rect x="30" y="159" width="80" height="18" fill="#555" rx="1"/>
+            <rect x="120" y="159" width="220" height="18" fill="#C8FF00" opacity=".5" rx="1"/>
+            <rect x="30" y="186" width="300" height="18" fill="#E8650A" opacity=".4" rx="1"/>
+            <!-- bottom label -->
+            <text x="200" y="240" fill="#444" font-family="Space Mono" font-size="8" text-anchor="middle" letter-spacing="2">SCHEDULE SIMULATION · SCENARIO MODELLING</text>
+          </svg>
+        </div>
+        <div class="sk-label">Simulation &amp; ERP</div>
+      </div>
+
+      <div class="sk-cell sk-cell--lime sk-cell--wide">
+        <div class="sk-img-wrap">
+          <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg" class="sk-svg">
+            <rect width="700" height="350" fill="#C8FF00"/>
+            <!-- Timeline / career path -->
+            <line x1="60" y1="175" x2="640" y2="175" stroke="#0A0A0A" stroke-width="3"/>
+            <!-- nodes -->
+            <circle cx="100" cy="175" r="16" fill="#0A0A0A"/>
+            <text x="100" y="180" fill="#C8FF00" font-family="Space Mono" font-size="8" text-anchor="middle">2018</text>
+            <circle cx="250" cy="175" r="16" fill="#0A0A0A"/>
+            <text x="250" y="180" fill="#C8FF00" font-family="Space Mono" font-size="8" text-anchor="middle">2021</text>
+            <circle cx="400" cy="175" r="16" fill="#0A0A0A"/>
+            <text x="400" y="180" fill="#C8FF00" font-family="Space Mono" font-size="8" text-anchor="middle">2022</text>
+            <circle cx="550" cy="175" r="16" fill="#0A0A0A"/>
+            <text x="550" y="180" fill="#C8FF00" font-family="Space Mono" font-size="8" text-anchor="middle">2023</text>
+            <circle cx="640" cy="175" r="22" fill="#E8650A" stroke="#0A0A0A" stroke-width="3"/>
+            <text x="640" y="178" fill="#0A0A0A" font-family="Space Mono" font-size="7" text-anchor="middle" font-weight="700">NOW</text>
+            <!-- labels above -->
+            <text x="100" y="140" fill="#0A0A0A" font-family="Space Mono" font-size="9" text-anchor="middle">WIPRO</text>
+            <text x="100" y="153" fill="#555" font-family="Space Mono" font-size="7" text-anchor="middle">RAK BANK</text>
+            <text x="250" y="140" fill="#0A0A0A" font-family="Space Mono" font-size="9" text-anchor="middle">ALERON</text>
+            <text x="250" y="153" fill="#555" font-family="Space Mono" font-size="7" text-anchor="middle">HR ANALYTICS</text>
+            <text x="400" y="140" fill="#0A0A0A" font-family="Space Mono" font-size="9" text-anchor="middle">MSc</text>
+            <text x="400" y="153" fill="#555" font-family="Space Mono" font-size="7" text-anchor="middle">STRATHCLYDE</text>
+            <text x="550" y="140" fill="#0A0A0A" font-family="Space Mono" font-size="9" text-anchor="middle">RGIS</text>
+            <text x="550" y="153" fill="#555" font-family="Space Mono" font-size="7" text-anchor="middle">INVENTORY</text>
+            <text x="640" y="140" fill="#0A0A0A" font-family="Space Mono" font-size="9" text-anchor="middle">AMEY PLC</text>
+            <text x="640" y="153" fill="#E8650A" font-family="Space Mono" font-size="7" text-anchor="middle">AI &amp; DATA</text>
+            <text x="350" y="310" fill="#0A0A0A" font-family="Space Mono" font-size="10" text-anchor="middle" letter-spacing="4">6 YEARS · 4 INDUSTRIES · 1 APPROACH</text>
+          </svg>
+        </div>
+        <div class="sk-label">Career Timeline</div>
       </div>
 
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════ -->
-  <!-- WORK / EXPERIENCE                            -->
-  <!-- ════════════════════════════════════════════ -->
-  <section id="work" class="section work-section">
-    <div class="section-head">
-      <span class="sec-num">02</span>
-      <h2 class="sec-title">Work</h2>
+  <!-- ════════════════════════════════════════ -->
+  <!-- WORK                                    -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="work" class="work-section">
+    <div class="work-head-row">
+      <div class="sec-label">02 — WORK</div>
+      <h2 class="work-title">WORK</h2>
     </div>
 
     <div class="work-list">
 
-      <div class="work-item" data-index="01">
-        <div class="work-top">
-          <div class="work-co">Amey Plc</div>
-          <div class="work-badge current">● Current</div>
-          <div class="work-period">Nov 2024 — Present</div>
-        </div>
-        <div class="work-role">Performance Data Analyst — AI &amp; Data</div>
-        <div class="work-body">
-          <p>Supporting the rollout of IFS WISE (AI-enabled ERP), engineering cloud data pipelines across Azure, Databricks, and Microsoft Fabric — then turning it all into dashboards that executives actually look at.</p>
-          <ul>
-            <li>Simulation modelling for roadworks planning and gang allocation</li>
-            <li>ETL pipelines from Oracle SQL → Azure Data Lake → Microsoft Fabric</li>
-            <li>Automated Power BI dashboards tracking fleet utilisation, compliance & cost KPIs</li>
-            <li>Power Automate + REST API workflows cutting manual reporting by a meaningful amount</li>
-          </ul>
-        </div>
-        <div class="work-tags">
-          <span>IFS WISE</span><span>Azure Databricks</span><span>Microsoft Fabric</span><span>Power BI</span><span>Oracle SQL</span><span>Power Automate</span>
+      <div class="work-row">
+        <div class="wr-index">01</div>
+        <div class="wr-main">
+          <div class="wr-top">
+            <div class="wr-co">Amey Plc</div>
+            <div class="wr-period">Nov 2024 — Present</div>
+            <span class="wr-now">● CURRENT</span>
+          </div>
+          <div class="wr-role">Performance Data Analyst — AI &amp; Data</div>
+          <div class="wr-body">
+            <p>Didn't walk in and start making charts. Walked in, mapped the system, found the gaps, and built the infrastructure that should have existed years ago. AI-enabled ERP rollout, schedule simulations, automated pipelines, dashboards that executives actually act on.</p>
+            <ul>
+              <li>IFS WISE simulation modelling for roadworks planning and gang allocation</li>
+              <li>ETL pipelines: Oracle SQL → Azure Data Lake → Microsoft Fabric</li>
+              <li>Automated Power BI dashboards for KPI tracking across fleet, compliance, cost</li>
+              <li>Power Automate + REST API workflows cutting manual overhead</li>
+            </ul>
+          </div>
+          <div class="wr-tags"><span>IFS WISE</span><span>Azure Databricks</span><span>Microsoft Fabric</span><span>Power BI</span><span>Oracle SQL</span><span>Power Automate</span></div>
         </div>
       </div>
 
-      <div class="work-item" data-index="02">
-        <div class="work-top">
-          <div class="work-co">RGIS</div>
-          <div class="work-period">Jan 2023 — Apr 2024</div>
+      <div class="work-row">
+        <div class="wr-index">02</div>
+        <div class="wr-main">
+          <div class="wr-top">
+            <div class="wr-co">Aleron Inc.</div>
+            <div class="wr-period">Sep 2021 — Sep 2022</div>
+          </div>
+          <div class="wr-role">HR Reporting Analyst</div>
+          <div class="wr-body">
+            <p>Built predictive models in Power BI that told the business what its turnover rate would be before it happened. Migrated data across SAP, Workday, and Work Nexus. Made HR analytics interesting, which is harder than it sounds.</p>
+            <ul>
+              <li>Predictive DAX models for workforce analytics in Power BI</li>
+              <li>MI reports on absence, headcount, and quality of hire</li>
+            </ul>
+          </div>
+          <div class="wr-tags"><span>Power BI</span><span>DAX</span><span>Workday</span><span>SAP Fieldglass</span><span>Cognos</span></div>
         </div>
-        <div class="work-role">Inventory Specialist</div>
-        <div class="work-body">
-          <p>Audited inventory across Sainsbury's, Apple, and Ted Baker. Found discrepancies, tracked trends, and proved that SQL is useful everywhere — including retail stockrooms.</p>
-          <ul>
-            <li>Inventory and sales analysis using SQL, Alteryx, and Excel</li>
-            <li>Demand forecasting and stock alignment across multiple brands</li>
-          </ul>
-        </div>
-        <div class="work-tags"><span>SQL</span><span>Alteryx</span><span>Excel</span></div>
       </div>
 
-      <div class="work-item" data-index="03">
-        <div class="work-top">
-          <div class="work-co">Aleron Inc.</div>
-          <div class="work-period">Sep 2021 — Sep 2022</div>
+      <div class="work-row">
+        <div class="wr-index">03</div>
+        <div class="wr-main">
+          <div class="wr-top">
+            <div class="wr-co">Wipro — RAK Bank</div>
+            <div class="wr-period">Sep 2018 — Apr 2019</div>
+          </div>
+          <div class="wr-role">Business Analyst · Loan Products</div>
+          <div class="wr-body">
+            <p>Found a 15% improvement in customer inquiry response time by looking at the loan origination process nobody had questioned in years. SQL and VBA automation to remove the bottleneck. Classic fix-not-report job.</p>
+            <ul>
+              <li>SQL + VBA automation for daily credit card portfolio MI reports</li>
+              <li>Gap analysis on end-to-end loan origination — 15% response time reduction</li>
+            </ul>
+          </div>
+          <div class="wr-tags"><span>SQL</span><span>VBA</span><span>Zoho CRM</span><span>Agile</span></div>
         </div>
-        <div class="work-role">HR Reporting Analyst</div>
-        <div class="work-body">
-          <p>Built predictive models to tackle employee turnover and optimise billable hours. Migrated data across SAP Fieldglass, Workday, and Work Nexus. Made HR analytics look interesting, which is harder than it sounds.</p>
-          <ul>
-            <li>Predictive DAX models in Power BI for workforce analytics</li>
-            <li>MI reports on absence, headcount, and quality of hire</li>
-          </ul>
-        </div>
-        <div class="work-tags"><span>Power BI</span><span>DAX</span><span>Workday</span><span>SAP Fieldglass</span><span>Cognos</span></div>
-      </div>
-
-      <div class="work-item" data-index="04">
-        <div class="work-top">
-          <div class="work-co">Wipro — RAK Bank</div>
-          <div class="work-period">Sep 2018 — Apr 2019</div>
-        </div>
-        <div class="work-role">Business Analyst · Loan Products</div>
-        <div class="work-body">
-          <p>Daily MI reports on credit card KPIs. Identified a 15% reduction in customer inquiry response time by fixing the loan origination process nobody had looked at properly in years.</p>
-          <ul>
-            <li>SQL + VBA automation for portfolio performance reporting</li>
-            <li>Gap analysis on end-to-end loan origination workflows</li>
-            <li>Agile stakeholder workshops and CRM (Zoho) improvements</li>
-          </ul>
-        </div>
-        <div class="work-tags"><span>SQL</span><span>VBA</span><span>Zoho CRM</span><span>Agile</span></div>
       </div>
 
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════ -->
-  <!-- SKILLS                                        -->
-  <!-- ════════════════════════════════════════════ -->
-  <section id="skills" class="section skills-section">
-    <div class="section-head">
-      <span class="sec-num">03</span>
-      <h2 class="sec-title">Stack</h2>
+  <!-- ════════════════════════════════════════ -->
+  <!-- CONTACT                                 -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="contact-left-col">
+      <div class="sec-label">03 — CONTACT</div>
+      <h2 class="contact-h">
+        Got a problem<br>that needs a<br><em>real fix?</em>
+      </h2>
+      <p class="body-p">Open to full-time roles and freelance projects. Especially anything where AI is the tool, the territory, or both.</p>
+      <p class="body-p">If you want someone who'll dig into your data and tell you what's actually wrong — not just put it in a slide — let's go.</p>
     </div>
 
-    <div class="skills-grid">
-      <div class="skill-col">
-        <h4>Cloud &amp; Engineering</h4>
-        <ul>
-          <li>Azure Data Lake</li>
-          <li>Azure Databricks</li>
-          <li>Microsoft Fabric (Gen2)</li>
-          <li>Data Warehouse</li>
-          <li>REST APIs / ETL</li>
-          <li>PySpark</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h4>Analytics &amp; BI</h4>
-        <ul>
-          <li>Power BI</li>
-          <li>DAX + Power Query (M)</li>
-          <li>Cognos / IBM SPSS</li>
-          <li>Simu8 (Simulation)</li>
-          <li>Alteryx</li>
-          <li>Excel (advanced)</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h4>Programming</h4>
-        <ul>
-          <li>Python (Pandas, sklearn, Matplotlib)</li>
-          <li>SQL / T-SQL / Oracle SQL</li>
-          <li>PySpark</li>
-          <li>VBA</li>
-          <li>JSON Prompting</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h4>Platforms</h4>
-        <ul>
-          <li>IFS WISE (AI-ERP)</li>
-          <li>SAP Fieldglass / Concur</li>
-          <li>Workday / SuccessFactors</li>
-          <li>Power Automate</li>
-          <li>n8n</li>
-          <li>Brightly Confirm / JIRA</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Interest strip -->
-    <div class="interest-strip">
-      <div class="interest-label">CURRENTLY OBSESSED WITH</div>
-      <div class="interest-items">
-        <span>LLM pipeline design</span>
-        <span>AI-augmented operational workflows</span>
-        <span>Agentic data systems</span>
-        <span>n8n automation</span>
-        <span>Prompt engineering at scale</span>
-      </div>
+    <div class="contact-right-col">
+      <a href="mailto:suujithramesh@gmail.com" class="clink">
+        <span class="cl-type">EMAIL</span>
+        <span class="cl-val">suujithramesh@gmail.com ↗</span>
+      </a>
+      <a href="tel:+447442601632" class="clink">
+        <span class="cl-type">PHONE</span>
+        <span class="cl-val">+44 7442 601632 ↗</span>
+      </a>
+      <a href="https://linkedin.com/in/suujith-vathsaa" target="_blank" rel="noopener" class="clink">
+        <span class="cl-type">LINKEDIN</span>
+        <span class="cl-val">Suujith Vathsaa ↗</span>
+      </a>
+      <a href="https://github.com/SuujithVathsaa" target="_blank" rel="noopener" class="clink">
+        <span class="cl-type">GITHUB</span>
+        <span class="cl-val">SuujithVathsaa ↗</span>
+      </a>
+      <a href="mailto:suujithramesh@gmail.com" class="cta-block">
+        START A CONVERSATION ↗
+      </a>
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════ -->
-  <!-- CONTACT                                       -->
-  <!-- ════════════════════════════════════════════ -->
-  <section id="contact" class="section contact-section">
-    <div class="section-head">
-      <span class="sec-num">04</span>
-      <h2 class="sec-title">Hire Me</h2>
-    </div>
-
-    <div class="contact-grid">
-      <div class="contact-left">
-        <h3 class="contact-h">Got a problem<br>that needs a <em>fix</em><br>— not a report?</h3>
-        <p class="body-copy">I'm open to full-time roles and freelance projects. Especially interested in anything where AI is either the tool or the territory.</p>
-        <p class="body-copy">If you want someone who'll actually dig into your data and tell you what's wrong — not just format it nicely — let's talk.</p>
-      </div>
-
-      <div class="contact-right">
-        <a href="mailto:suujithramesh@gmail.com" class="c-row">
-          <span class="c-type">EMAIL</span>
-          <span class="c-val">suujithramesh@gmail.com ↗</span>
-        </a>
-        <a href="tel:+447442601632" class="c-row">
-          <span class="c-type">PHONE</span>
-          <span class="c-val">+44 7442 601632 ↗</span>
-        </a>
-        <a href="https://linkedin.com/in/suujith-vathsaa" target="_blank" rel="noopener" class="c-row">
-          <span class="c-type">LINKEDIN</span>
-          <span class="c-val">Suujith Vathsaa ↗</span>
-        </a>
-        <a href="https://github.com/SuujithVathsaa" target="_blank" rel="noopener" class="c-row">
-          <span class="c-type">GITHUB</span>
-          <span class="c-val">SuujithVathsaa ↗</span>
-        </a>
-
-        <a href="mailto:suujithramesh@gmail.com" class="big-cta">START A CONVERSATION ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ──────────────────────────────────── -->
+  <!-- ── FOOTER ────────────────────────────── -->
   <footer class="footer">
-    <div class="footer-left">
-      <img src="logo.png" alt="SVR" class="footer-wolf">
+    <div class="footer-l">
+      <img src="logo.png" alt="SVR" class="footer-wolf" id="footerWolf">
       <span>SVR © 2026</span>
     </div>
-    <div class="footer-center">Data Analyst · AI Explorer · Problem Dissolver</div>
-    <div class="footer-right">
+    <div class="footer-c">Problem Solver · AI Explorer · Modern Fix</div>
+    <div class="footer-r">
       <a href="mailto:suujithramesh@gmail.com">Email</a>
       <a href="https://linkedin.com/in/suujith-vathsaa" target="_blank">LinkedIn</a>
       <a href="https://github.com/SuujithVathsaa" target="_blank">GitHub</a>
