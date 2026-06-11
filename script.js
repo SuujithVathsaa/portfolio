@@ -1,134 +1,144 @@
 /* ══════════════════════════════════════════════
-   SVR — JS
+   SVR — JS (dark / Kanit redesign)
    ══════════════════════════════════════════════ */
 
-/* ── 1. WOLF COLOR SHIFT ─────────────────────── */
-(function wolfColorShift() {
-  const wolf  = document.getElementById('wolfHero');
-  const glow  = document.getElementById('wolfGlow');
-  const nav   = document.getElementById('navWolf');
-  const footer= document.getElementById('footerWolf');
-  if (!wolf) return;
-
-  const colors = [
-    { filter: 'hue-rotate(0deg) saturate(1.2)',         glow: 'rgba(232,101,10,.18)' },   // original orange
-    { filter: 'hue-rotate(60deg) saturate(1.5)',         glow: 'rgba(200,255,0,.18)' },    // lime
-    { filter: 'hue-rotate(180deg) saturate(1.3)',        glow: 'rgba(0,200,255,.15)' },    // cyan
-    { filter: 'hue-rotate(270deg) saturate(1.2)',        glow: 'rgba(200,0,255,.12)' },    // purple
-    { filter: 'hue-rotate(0deg) saturate(0) brightness(1.8)', glow: 'rgba(255,255,255,.12)' }, // white
-  ];
-
-  let idx = 0;
-  function shift() {
-    idx = (idx + 1) % colors.length;
-    const c = colors[idx];
-    [wolf, nav, footer].forEach(el => {
-      if (el) el.style.filter = c.filter;
-    });
-    if (glow) {
-      glow.style.background = `radial-gradient(circle, ${c.glow} 0%, transparent 70%)`;
-    }
-  }
-
-  setInterval(shift, 3000);
-})();
-
-/* ── 2. MOBILE MENU ──────────────────────────── */
-(function mobileNav() {
-  const btn  = document.getElementById('hamburger');
-  const menu = document.getElementById('mobMenu');
-  if (!btn || !menu) return;
-
-  btn.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    btn.classList.toggle('open');
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-
-  menu.querySelectorAll('.mob-lnk').forEach(l => {
-    l.addEventListener('click', () => {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-})();
-
-/* ── 3. WORK ROW EXPAND ──────────────────────── */
-(function workExpand() {
-  document.querySelectorAll('.work-row').forEach(row => {
-    const body = row.querySelector('.wr-body');
-    if (!body) return;
-    body.style.maxHeight = '0';
-    body.style.opacity   = '0';
-    body.style.overflow  = 'hidden';
-    body.style.transition = 'max-height .5s ease, opacity .4s ease';
-
-    row.addEventListener('mouseenter', () => {
-      body.style.maxHeight = body.scrollHeight + 'px';
-      body.style.opacity   = '1';
-    });
-    row.addEventListener('mouseleave', () => {
-      body.style.maxHeight = '0';
-      body.style.opacity   = '0';
-    });
-  });
-})();
-
-/* ── 4. SCROLL REVEAL ────────────────────────── */
+/* ── 1. SCROLL REVEAL ─────────────────────────── */
 (function scrollReveal() {
-  const els = document.querySelectorAll(
-    '.about-big, .about-detail-col, .sk-cell, .work-row, .clink, .contact-h, .stat-band, .award-strip'
-  );
+  const els = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        e.target.style.opacity   = '1';
-        e.target.style.transform = 'translateY(0)';
+        e.target.classList.add('in-view');
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.06 });
-
+  }, { threshold: 0.08 });
   els.forEach((el, i) => {
-    el.style.opacity    = '0';
-    el.style.transform  = 'translateY(28px)';
-    el.style.transition = `opacity .7s ease ${(i % 6) * 0.08}s, transform .7s ease ${(i % 6) * 0.08}s`;
+    el.style.transitionDelay = `${(i % 6) * 0.08}s`;
     io.observe(el);
   });
 })();
 
-/* ── 5. NAV ACTIVE LINK ──────────────────────── */
-(function navActive() {
-  const sections = document.querySelectorAll('section[id]');
-  const links    = document.querySelectorAll('.nav-links a');
+/* ── 4. MARQUEE — build rows + scroll-driven shift ── */
+(function marquee() {
+  const row1 = document.getElementById('marqueeRow1');
+  const row2 = document.getElementById('marqueeRow2');
+  if (!row1 || !row2) return;
 
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        links.forEach(l => l.style.borderBottomColor = 'transparent');
-        const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-        if (a) a.style.borderBottomColor = 'var(--black)';
-      }
-    });
-  }, { threshold: 0.35 });
+  const set1 = [
+    ['Power BI', 'Dashboards'], ['Azure Databricks', 'Data Engineering'],
+    ['Microsoft Fabric', 'Lakehouse'], ['Oracle SQL', 'Databases'],
+    ['Python', 'Pandas · scikit-learn'], ['PySpark', 'Big Data'],
+    ['DAX', 'Modelling'], ['IFS WISE', 'AI Scheduling'],
+    ['Power Automate', 'Workflows'], ['REST APIs', 'Integration'],
+    ['n8n', 'Automation'],
+  ];
+  const set2 = [
+    ['SQL', 'Querying'], ['VBA', 'Automation'],
+    ['Workday', 'HR Systems'], ['SAP Fieldglass', 'HR Systems'],
+    ['Cognos', 'Reporting'], ['Excel', 'Modelling'],
+    ['JIRA', 'Agile'], ['Copilot', 'AI Assist'],
+    ['Azure', 'Cloud'], ['Power Query', 'M Syntax'],
+  ];
 
-  sections.forEach(s => io.observe(s));
+  function fill(track, items) {
+    const tripled = [...items, ...items, ...items];
+    track.innerHTML = tripled.map(([name, tag]) => `
+      <div class="marquee-tile">
+        <strong>${name}</strong>
+        <small>${tag}</small>
+      </div>
+    `).join('');
+  }
+  fill(row1, set1);
+  fill(row2, set2);
+
+  const section = document.querySelector('.marquee-section');
+  let ticking = false;
+
+  function update() {
+    const rect = section.getBoundingClientRect();
+    const sectionTop = rect.top + window.scrollY;
+    const offset = (window.scrollY - sectionTop + window.innerHeight) * 0.3;
+    row1.style.transform = `translateX(${offset - 200}px)`;
+    row2.style.transform = `translateX(${-(offset - 200)}px)`;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
 })();
 
-/* ── 6. HERO TEXT STAGGER ────────────────────── */
-(function heroStagger() {
-  document.querySelector('.hero-sub') && (() => {
-    const sub  = document.querySelector('.hero-sub');
-    const lines = document.querySelectorAll('.hero-h1 br + *,.hero-h1');
-    const acts  = document.querySelector('.hero-actions');
+/* ── 5. ABOUT TEXT — character reveal on scroll ── */
+(function aboutTextReveal() {
+  const p = document.getElementById('aboutText');
+  if (!p) return;
 
-    [sub].forEach((el, i) => {
-      if (!el) return;
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(16px)';
-      el.style.transition = `opacity .7s ease ${i * .15}s, transform .7s ease ${i * .15}s`;
-      setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 100);
+  const text = p.textContent;
+  p.textContent = '';
+  const chars = [...text].map(ch => {
+    const span = document.createElement('span');
+    span.textContent = ch === ' ' ? ' ' : ch;
+    p.appendChild(span);
+    return span;
+  });
+
+  let ticking = false;
+  function update() {
+    const rect = p.getBoundingClientRect();
+    const start = window.innerHeight * 0.85;
+    const end = window.innerHeight * 0.35;
+    const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end)));
+    const total = chars.length;
+    chars.forEach((span, i) => {
+      const charProgress = Math.min(1, Math.max(0, (progress * total - i) ));
+      span.style.opacity = (0.2 + charProgress * 0.8).toFixed(2);
     });
-  })();
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
+})();
+
+/* ── 6. STICKY PROJECT CARDS — scale on stack ──── */
+(function projectCards() {
+  const cards = document.querySelectorAll('.project-card');
+  if (!cards.length) return;
+
+  let ticking = false;
+  function update() {
+    cards.forEach((card, i) => {
+      const next = cards[i + 1];
+      if (!next) return;
+      const cardRect = card.getBoundingClientRect();
+      const nextRect = next.getBoundingClientRect();
+      const overlap = Math.max(0, cardRect.bottom - nextRect.top);
+      const progress = Math.min(1, overlap / cardRect.height);
+      const scale = 1 - progress * 0.05;
+      card.style.transform = `scale(${scale})`;
+    });
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
 })();
