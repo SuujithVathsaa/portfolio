@@ -398,8 +398,11 @@ img { display: block; max-width: 100%; }
   font-size: clamp(3rem, 12vw, 9.5rem);
 }
 .about-text {
-  color: var(--light); font-weight: 500; line-height: 1.65;
-  max-width: 580px; font-size: clamp(1rem, 2vw, 1.35rem);
+  /* editorial serif statement */
+  font-family: var(--f-quote); font-weight: 400; font-style: normal;
+  color: #EDF2F6; line-height: 1.3; letter-spacing: -.01em;
+  max-width: 24ch; font-size: clamp(1.6rem, 4.6vw, 3.4rem);
+  text-wrap: balance;
 }
 .about-text span { opacity: .2; }
 
