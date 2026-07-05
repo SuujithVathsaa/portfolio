@@ -7,10 +7,26 @@
   <meta name="description" content="Suujith Vathsaa Ramesh. I don't analyse data. I find what's broken and fix it using whatever modern tool does it fastest.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="theme-color" content="#0C0C0C">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ambient sound toggle (Web Audio; off by default) -->
+  <button id="soundToggle" class="sound-toggle" aria-pressed="false" aria-label="Play ambient sound">
+    <span class="sound-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="sound-label">Ambient</span>
+  </button>
+
+  <!-- ambient aurora field (fixed, immersive) -->
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora-blob aurora-blob--1"></span>
+    <span class="aurora-blob aurora-blob--2"></span>
+    <span class="aurora-blob aurora-blob--3"></span>
+    <span class="aurora-grain"></span>
+  </div>
 
   <!-- ════════════════════════════════════════ -->
   <!-- HERO                                    -->
@@ -18,11 +34,17 @@
   <section id="hero" class="hero">
 
     <nav class="navbar">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#builds">Builds</a>
-      <a href="#contact">Contact</a>
+      <a href="#hero" class="nav-brand" aria-label="SVR home">
+        <img src="logo.png" alt="Suujith Vathsaa emblem" width="36" height="36">
+        <span>SVR</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#builds">Builds</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
 
     <div class="hero-heading-wrap">
@@ -32,6 +54,10 @@
     <div class="hero-bottom">
       <p class="hero-tagline">a problem solver driven by finding what&apos;s broken &amp; fixing it with whatever modern tool works fastest</p>
       <a href="mailto:suujithramesh@gmail.com?subject=Let%27s%20Work%20Together" class="contact-btn">Contact Me</a>
+    </div>
+
+    <div class="hero-emblem" aria-hidden="true">
+      <img src="logo.png" alt="">
     </div>
 
     <div class="hero-glow-bg"></div>
@@ -134,6 +160,35 @@
 
     <a href="mailto:suujithramesh@gmail.com?subject=Let%27s%20Work%20Together" class="contact-btn reveal">Contact Me</a>
 
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- CAPABILITY RADAR                        -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="radar-section">
+    <div class="radar-copy reveal">
+      <span class="radar-eyebrow">Operating range</span>
+      <h2 class="radar-title">Where I go deep</h2>
+      <p class="radar-lead">Six axes I work across daily — from raw ingestion to AI-assisted delivery. The shape is the point: full-stack across the data lifecycle, not a single spike.</p>
+      <ul class="radar-legend" id="radarLegend"></ul>
+    </div>
+    <div class="radar-viz reveal">
+      <svg id="radarChart" viewBox="0 0 420 420" role="img" aria-label="Radar chart of capabilities across six domains"></svg>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- QUOTE — data & AI manifesto             -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="quote-section">
+    <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+    <blockquote class="quote-body reveal">
+      Data without intelligence is just noise.
+      Intelligence without data is just a guess.
+      <em>I build where the two collide</em> — turning raw signal into
+      decisions that people, and machines, can actually trust.
+    </blockquote>
+    <p class="quote-attr reveal">— Suujith Vathsaa Ramesh · Data &amp; AI</p>
   </section>
 
   <!-- ════════════════════════════════════════ -->
