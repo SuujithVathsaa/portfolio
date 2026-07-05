@@ -2,6 +2,15 @@
    SVR — JS (dark / Kanit redesign)
    ══════════════════════════════════════════════ */
 
+/* ── 00. HERO VIDEO — respect reduced motion ──── */
+(function heroVideo() {
+  const v = document.querySelector('.hero-video');
+  if (v && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    v.removeAttribute('autoplay');
+    v.pause();
+  }
+})();
+
 /* ── 0. LIQUID NAME — letters flow with the cursor ── */
 (function liquidName() {
   const h1 = document.getElementById('liquidName');
