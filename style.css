@@ -212,12 +212,23 @@ img { display: block; max-width: 100%; }
 .ghost-btn:hover { background: var(--glass-bg-hi); transform: translateY(-2px); box-shadow: var(--elev-2), inset 0 1px 0 rgba(255,255,255,.12); }
 
 /* ── HERO ─────────────────────────────────────── */
+/* tall scroll stage: video first, name arrives on scroll */
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 190vh; height: 190svh;
+}
+.hero-sticky {
+  position: sticky; top: 0;
+  height: 100vh; height: 100svh;
   display: flex; flex-direction: column; justify-content: space-between;
   overflow: clip;
   padding-bottom: 1.75rem;
+}
+/* intro start state (only when JS armed the intro; overridden inline on scroll) */
+html.intro .hero-card  { opacity: 0; transform: translateY(36px) scale(.97); }
+html.intro .hero-bottom { opacity: 0; transform: translateY(24px); }
+@media (prefers-reduced-motion: reduce) {
+  html.intro .hero-card, html.intro .hero-bottom { opacity: 1; transform: none; }
 }
 
 .navbar {

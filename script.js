@@ -11,6 +11,49 @@
   }
 })();
 
+/* ── 01. PINNED INTRO — video first, name arrives on scroll ── */
+(function heroIntro() {
+  const hero = document.querySelector('.hero');
+  const card = document.querySelector('.hero-card');
+  const bottom = document.querySelector('.hero-bottom');
+  const cue = document.querySelector('.scroll-cue');
+  const scrim = document.querySelector('.hero-scrim');
+  if (!hero || !card) return;
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { document.documentElement.classList.remove('intro'); return; }
+
+  const clamp01 = v => Math.min(1, Math.max(0, v));
+  const fade = (p, a, b) => clamp01((p - a) / (b - a));
+  const easeOut = t => 1 - Math.pow(1 - t, 3);
+
+  let ticking = false;
+  function update() {
+    const range = hero.offsetHeight - window.innerHeight;
+    const p = range > 0 ? clamp01((window.scrollY - hero.offsetTop) / range) : 1;
+
+    const cardE = easeOut(fade(p, 0.08, 0.55));
+    card.style.opacity = cardE.toFixed(3);
+    card.style.transform =
+      `translateY(${((1 - cardE) * 36).toFixed(1)}px) scale(${(0.97 + cardE * 0.03).toFixed(3)})`;
+
+    if (bottom) {
+      const botE = easeOut(fade(p, 0.3, 0.8));
+      bottom.style.opacity = botE.toFixed(3);
+      bottom.style.transform = `translateY(${((1 - botE) * 24).toFixed(1)}px)`;
+    }
+    if (cue) cue.style.opacity = (1 - fade(p, 0, 0.3)).toFixed(3);
+    if (scrim) scrim.style.opacity = (0.55 + 0.45 * fade(p, 0.05, 0.6)).toFixed(3);
+
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+
 /* ── 0. LIQUID NAME — letters flow with the cursor ── */
 (function liquidName() {
   const h1 = document.getElementById('liquidName');
