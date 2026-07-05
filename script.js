@@ -113,6 +113,27 @@
   update();
 })();
 
+/* ── 5b. SPATIAL TILT — build cards follow the cursor ── */
+(function spatialTilt() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(hover: none)').matches) return; // skip on touch
+  const cards = document.querySelectorAll('.build-card');
+  const MAX = 7; // degrees
+
+  cards.forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform =
+        `translateY(-6px) rotateX(${(-py * MAX).toFixed(2)}deg) rotateY(${(px * MAX).toFixed(2)}deg) scale(1.02)`;
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.transform = '';
+    });
+  });
+})();
+
 /* ── 6. STICKY PROJECT CARDS — scale on stack ──── */
 (function projectCards() {
   const cards = document.querySelectorAll('.project-card');
