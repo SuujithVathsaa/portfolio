@@ -2,6 +2,98 @@
    SVR — JS (dark / Kanit redesign)
    ══════════════════════════════════════════════ */
 
+/* ── 0. LIQUID NAME — letters flow with the cursor ── */
+(function liquidName() {
+  const h1 = document.getElementById('liquidName');
+  if (!h1) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  // split each line into letter spans
+  const letters = [];
+  h1.querySelectorAll('.liquid-line').forEach(line => {
+    const text = line.dataset.text || '';
+    line.textContent = '';
+    [...text].forEach(ch => {
+      const s = document.createElement('span');
+      s.className = 'lq';
+      s.textContent = ch;
+      line.appendChild(s);
+      letters.push({ el: s, inf: 0, target: 0 });
+    });
+  });
+  if (reduce || !fine) return; // static type on touch / reduced motion
+
+  let mx = -9999, my = -9999, raf = null, idle = 0;
+  const R = 170;          // influence radius (px)
+  const LERP = 0.14;      // liquid lag
+
+  window.addEventListener('pointermove', e => {
+    mx = e.clientX; my = e.clientY; idle = 0;
+    if (!raf) raf = requestAnimationFrame(tick);
+  }, { passive: true });
+
+  function tick() {
+    let alive = false;
+    letters.forEach(L => {
+      const r = L.el.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      const d = Math.hypot(mx - cx, my - cy);
+      L.target = Math.exp(-(d / R) * (d / R));       // gaussian falloff
+      L.inf += (L.target - L.inf) * LERP;             // liquid lag
+      if (L.inf > 0.004) {
+        alive = true;
+        const i = L.inf;
+        L.el.style.transform =
+          `translateY(${(-22 * i).toFixed(2)}px) scaleY(${(1 + i * 0.06).toFixed(3)})`;
+        L.el.style.fontVariationSettings = `'wght' ${Math.round(420 + i * 260)}`;
+        L.el.style.textShadow =
+          `0 1px 0 rgba(255,255,255,${(.08 + i * .3).toFixed(2)}),` +
+          `0 ${14 - i * 8}px 40px rgba(0,0,0,.5),` +
+          `0 0 ${Math.round(i * 42)}px rgba(242,106,27,${(i * .45).toFixed(2)})`;
+      } else {
+        L.el.style.transform = '';
+        L.el.style.fontVariationSettings = `'wght' 420`;
+        L.el.style.textShadow = '';
+      }
+    });
+    idle++;
+    if (alive || idle < 40) { raf = requestAnimationFrame(tick); }
+    else { raf = null; }
+  }
+})();
+
+/* ── 0b. CUSTOM CURSOR — dot + trailing ring ──── */
+(function customCursor() {
+  const dot = document.querySelector('.cursor-dot');
+  const ring = document.querySelector('.cursor-ring');
+  if (!dot || !ring) return;
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let mx = -100, my = -100, rx = -100, ry = -100, raf = null;
+  window.addEventListener('pointermove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%,-50%)`;
+    if (!raf) raf = requestAnimationFrame(follow);
+  }, { passive: true });
+
+  function follow() {
+    rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
+    ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%,-50%)`;
+    raf = (Math.abs(mx - rx) > .2 || Math.abs(my - ry) > .2)
+      ? requestAnimationFrame(follow) : null;
+  }
+
+  const HOVER = 'a, button, .build-card, .marquee-tile';
+  document.addEventListener('pointerover', e => {
+    if (e.target.closest(HOVER)) ring.classList.add('is-hover');
+  });
+  document.addEventListener('pointerout', e => {
+    if (e.target.closest(HOVER)) ring.classList.remove('is-hover');
+  });
+})();
+
 /* ── 1. SCROLL REVEAL ─────────────────────────── */
 (function scrollReveal() {
   const els = document.querySelectorAll('.reveal');

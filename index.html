@@ -7,12 +7,16 @@
   <meta name="description" content="Suujith Vathsaa Ramesh. I don't analyse data. I find what's broken and fix it using whatever modern tool does it fastest.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="logo.png">
   <meta name="theme-color" content="#0C0C0C">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- custom cursor (desktop only) -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 
   <!-- ambient sound toggle (Web Audio; off by default) -->
   <button id="soundToggle" class="sound-toggle" aria-pressed="false" aria-label="Play ambient sound">
@@ -48,7 +52,11 @@
     </nav>
 
     <div class="hero-heading-wrap">
-      <h1 class="hero-h1 hero-heading-grad">Hi, i&apos;m suujith</h1>
+      <p class="hero-eyebrow">Data · AI · Decisions — UK</p>
+      <h1 class="hero-h1" id="liquidName" aria-label="Suujith Vathsaa">
+        <span class="liquid-line" data-text="suujith"></span>
+        <span class="liquid-line" data-text="vathsaa"></span>
+      </h1>
     </div>
 
     <div class="hero-bottom">
@@ -181,14 +189,12 @@
   <!-- QUOTE — data & AI manifesto             -->
   <!-- ════════════════════════════════════════ -->
   <section class="quote-section">
-    <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+    <span class="quote-eyebrow reveal">A note on decisions</span>
     <blockquote class="quote-body reveal">
-      Data without intelligence is just noise.
-      Intelligence without data is just a guess.
-      <em>I build where the two collide</em> — turning raw signal into
-      decisions that people, and machines, can actually trust.
+      A decision without data is a gut feeling.<br>
+      A decision with intelligence is <em>an unfair advantage.</em>
     </blockquote>
-    <p class="quote-attr reveal">— Suujith Vathsaa Ramesh · Data &amp; AI</p>
+    <p class="quote-attr reveal">SVR — Data &amp; AI</p>
   </section>
 
   <!-- ════════════════════════════════════════ -->
