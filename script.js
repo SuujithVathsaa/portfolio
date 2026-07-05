@@ -18,17 +18,18 @@
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-  // split each line into letter spans
+  // split each line into letter spans (per-line base weight for Syne)
   const letters = [];
-  h1.querySelectorAll('.liquid-line').forEach(line => {
+  h1.querySelectorAll('.liquid-line').forEach((line, li) => {
     const text = line.dataset.text || '';
+    const base = li === 0 ? 750 : 550;
     line.textContent = '';
     [...text].forEach(ch => {
       const s = document.createElement('span');
       s.className = 'lq';
       s.textContent = ch;
       line.appendChild(s);
-      letters.push({ el: s, inf: 0, target: 0 });
+      letters.push({ el: s, inf: 0, target: 0, base });
     });
   });
   if (reduce || !fine) return; // static type on touch / reduced motion
@@ -54,15 +55,14 @@
         alive = true;
         const i = L.inf;
         L.el.style.transform =
-          `translateY(${(-22 * i).toFixed(2)}px) scaleY(${(1 + i * 0.06).toFixed(3)})`;
-        L.el.style.fontVariationSettings = `'wght' ${Math.round(420 + i * 260)}`;
+          `translateY(${(-9 * i).toFixed(2)}px) scaleY(${(1 + i * 0.04).toFixed(3)})`;
+        L.el.style.fontVariationSettings = `'wght' ${Math.round(L.base + i * (800 - L.base))}`;
         L.el.style.textShadow =
-          `0 1px 0 rgba(255,255,255,${(.08 + i * .3).toFixed(2)}),` +
-          `0 ${14 - i * 8}px 40px rgba(0,0,0,.5),` +
-          `0 0 ${Math.round(i * 42)}px rgba(242,106,27,${(i * .45).toFixed(2)})`;
+          `0 2px 18px rgba(0,0,0,.45),` +
+          `0 0 ${Math.round(i * 26)}px rgba(242,106,27,${(i * .38).toFixed(2)})`;
       } else {
         L.el.style.transform = '';
-        L.el.style.fontVariationSettings = `'wght' 420`;
+        L.el.style.fontVariationSettings = `'wght' ${L.base}`;
         L.el.style.textShadow = '';
       }
     });
